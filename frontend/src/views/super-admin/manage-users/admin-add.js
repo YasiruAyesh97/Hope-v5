@@ -170,7 +170,7 @@ const AdminAdd =() =>{
                                             >
                                                 <option value="">select</option>
                                                 {companyList.map((option) => (
-                                                    <option value={option.id}>{option.name}</option>
+                                                    <option key={option.id} value={option.id}>{option.name}</option>
                                                 ))}
                                             </Form.Select>
                                             <Form.Control.Feedback type={errors.companyId?"invalid":"valid"}>

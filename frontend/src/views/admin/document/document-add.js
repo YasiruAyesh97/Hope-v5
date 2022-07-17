@@ -204,7 +204,7 @@ const AdminAdd =() =>{
                                                         >
                                                             <option value="">select</option>
                                                             {catalog1List.map((option) => (
-                                                                <option value={option.id}>{option.name}</option>
+                                                                <option key={option.id} value={option.id}>{option.name}</option>
                                                             ))}
                                                         </Form.Select>
                                                         <Form.Control.Feedback type={errors.catalog1Id?"invalid":"valid"}>
@@ -225,7 +225,7 @@ const AdminAdd =() =>{
                                                         >
                                                             <option value="">select</option>
                                                             {catalog2List.map((option) => (
-                                                                <option value={option.id}>{option.name}</option>
+                                                                <option key={option.id} value={option.id}>{option.name}</option>
                                                             ))}
                                                         </Form.Select>
                                                         <Form.Control.Feedback type={errors.catalog2Id?"invalid":"valid"}>
@@ -246,7 +246,7 @@ const AdminAdd =() =>{
                                                         >
                                                             <option value="">select</option>
                                                             {catalog3List.map((option) => (
-                                                                <option value={option.id}>{option.name}</option>
+                                                                <option key={option.id} value={option.id}>{option.name}</option>
                                                             ))}
                                                         </Form.Select>
                                                         <Form.Control.Feedback type={errors.catalog3Id?"invalid":"valid"}>
