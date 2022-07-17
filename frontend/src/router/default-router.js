@@ -15,7 +15,6 @@ const DefaultRouter = () => {
    const [allowRouteList,setAllowRouteList]=useState([]);
 
     useEffect(()=>{
-        //routes.filter(r=>r.role.includes(allowRoleList))
         if(allowRoleList.includes("ROLE_SUPERADMIN")){
             setAllowRouteList(routes.filter(r=>r.role.includes('ROLE_SUPERADMIN')))
         }
@@ -23,8 +22,6 @@ const DefaultRouter = () => {
             const adminArr =routes.filter(r=>r.role.includes('ROLE_ADMIN'));
             const userArr =routes.filter(r=>r.role.includes('ROLE_USER'));
             setAllowRouteList(adminArr.concat(userArr));
-
-
         }
         else if(allowRoleList.includes("ROLE_ADMIN")){
             setAllowRouteList(routes.filter(r=>r.role.includes('ROLE_ADMIN')))

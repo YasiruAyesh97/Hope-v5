@@ -112,7 +112,6 @@ const AdminAdd =() =>{
 
                       <Card.Body>
 
-                         {/*<Card.Alert color="danger">done</Card.Alert>*/}
                          <div className="new-user-info">
                             <Formik
                                 validationSchema={schema}

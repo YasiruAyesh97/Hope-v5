@@ -1,4 +1,4 @@
-import React, {useState, useContext, useEffect} from 'react'
+import React, {useState, useContext} from 'react'
 import { Link, useLocation} from 'react-router-dom'
 import {Accordion, useAccordionButton, AccordionContext} from 'react-bootstrap'
 import jwtDecode from "jwt-decode";
@@ -26,11 +26,6 @@ const VerticalNav = () => {
     //location
     let location = useLocation();
 
-    useEffect(()=>{
-        console.log(allowedRoles)
-        console.log("allowedRoles.includes(\"ROLE_ADMIN\") :"+allowedRoles.includes("ROLE_ADMIN"))
-        console.log("allowedRoles.includes(\"ROLE_USER\") :"+allowedRoles.includes("ROLE_USER"))
-    },[])
     return (
         <>
             <Accordion as="ul" className="navbar-nav iq-main-menu">
